@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = 'todolist'
-        DOCKER_HUB_REPO = 'GLopez9982/todolist'
+        DOCKER_HUB_REPO = 'glopez9982/todolist'
     }
 
     stages {
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
                 sh 'docker tag $IMAGE_NAME $DOCKER_HUB_REPO:latest'
-                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/']) {
+                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v2/glopez9982/todolist/']) {
                     sh 'docker push $DOCKER_HUB_REPO:latest'
                 }
             }
