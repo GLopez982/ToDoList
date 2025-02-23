@@ -31,7 +31,7 @@ pipeline {
            steps {
                bat 'docker build -t %IMAGE_NAME% .'
                bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
-               bat 'docker login -u Glopez9982 -p Whitehot2005!'
+               bat 'echo "Whitehot2005!" | docker login -u Glopez9982 --password-stdin'
                bat 'docker push %DOCKER_HUB_REPO%'
            }
        }
