@@ -27,15 +27,14 @@ pipeline {
             }
         }
 
-        stage('Docker Build & Push') {
-            steps {
-                bat 'docker build -t %IMAGE_NAME% .'
-                bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
-              withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/']) {
-                bat 'docker push %DOCKER_HUB_REPO%'
-              }
-            }
-        }
+       stage('Docker Build & Push') {
+           steps {
+               bat 'docker build -t %IMAGE_NAME% .'
+               bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
+               bat 'docker login -u your-username -p your-password'
+               bat 'docker push %DOCKER_HUB_REPO%'
+           }
+       }
 
         stage('Deploy') {
             steps {
