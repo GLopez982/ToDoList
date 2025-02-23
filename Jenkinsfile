@@ -33,9 +33,6 @@ pipeline {
                 bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
               withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/']) {
                 bat 'docker push %DOCKER_HUB_REPO%
-
-                echo "Whitehot2005!" | docker login -u glopez9982 --password-stdinPO%:latest'
-
               }
             }
         }
