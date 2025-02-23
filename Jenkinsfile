@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = 'todolist'
-        DOCKER_HUB_REPO = 'todolist'
+        DOCKER_HUB_REPO = 'glopez9982/todolist'
         REGISTRY_CREDENTIALS = 'docker-hub-credentials'
 
     }
@@ -32,7 +32,10 @@ pipeline {
                 bat 'docker build -t %IMAGE_NAME% .'
                 bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
               withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/']) {
-                bat 'docker push %DOCKER_HUB_REPO%:latest'
+                bat 'docker push %DOCKER_HUB_REPO%
+
+                echo "Whitehot2005!" | docker login -u glopez9982 --password-stdinPO%:latest'
+
               }
             }
         }
