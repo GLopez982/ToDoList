@@ -31,7 +31,7 @@ pipeline {
             steps {
                 bat 'docker build -t %IMAGE_NAME% .'
                 bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
-              withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+              withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'Glopez9982', passwordVariable: 'Whitehot2005!')]) {
                   bat 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
               }
             }
