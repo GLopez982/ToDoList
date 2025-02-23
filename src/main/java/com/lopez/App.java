@@ -1,5 +1,6 @@
 package com.lopez;
-import javax.swing.*;
+
+import java.util.Scanner;
 
 public class App 
 {
@@ -17,10 +18,12 @@ public class App
 
             while(isRunning) {
 
-                String userChoice = JOptionPane.showInputDialog(null, "A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
+                Scanner input = new Scanner(System.in);
+                System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
+                String userChoice = input.nextLine();
                 while(userChoice.isEmpty()){
-                    userChoice = JOptionPane.showInputDialog(null, "A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
-
+                    System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
+                    userChoice = input.nextLine();
                 }
                 char userchar = userChoice.toUpperCase().charAt(0);
 
@@ -28,7 +31,8 @@ public class App
 
 
                     case 'A':
-                        String chore = JOptionPane.showInputDialog(null, "Please enter a chore to add to the list >> ");
+                        System.out.println("Please enter a chore to add to the list >> ");
+                        String chore = input.nextLine();
                         myDoList.addChore(chore);
                         System.out.println("Chore list updated successfully ");
                         break;
@@ -37,9 +41,10 @@ public class App
 
                         System.out.println("This is your current ToDo list >>> ");
                         System.out.println(myDoList.toString());
-                        String userIndex = JOptionPane.showInputDialog(null, "Enter the index number of the completed chore to be removed >>> ");
-                        int indexNum = Integer.parseInt(userIndex);
-                        myDoList.removeChore(indexNum);
+                        System.out.println("Enter the index number of the completed chore to be removed >>> ");
+                        int  userIndex = input.nextInt();
+                        input.nextLine();
+                        myDoList.removeChore(userIndex);
                         System.out.println("Chore removed successfully ");
                         break;
 
@@ -56,7 +61,8 @@ public class App
                         break;
 
                     default:
-                        userChoice = JOptionPane.showInputDialog(null, "Please enter a valid menu choice >> ");
+                        System.out.println("Please enter a valid menu choice >> ");
+                        userChoice = input.nextLine();
                         userchar = userChoice.toLowerCase().charAt(0);
                         break;
 

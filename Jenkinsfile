@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'my-java-app'
+        IMAGE_NAME = 'todolist'
         DOCKER_HUB_REPO = 'your-dockerhub-username/my-java-app'
     }
 
