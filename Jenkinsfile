@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = 'todolist'
-        DOCKER_HUB_REPO = 'todolist:latest'
+        DOCKER_HUB_REPO = 'todolist'
         REGISTRY_CREDENTIALS = 'docker-hub-credentials'
 
     }
