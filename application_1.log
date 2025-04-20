@@ -1,0 +1,76 @@
+Apr 20, 2025 4:42:51 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:42:54 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 4:43:03 PM com.lopez.App main
+INFO: Adding new chore: Work on getting kubernetes to cluster
+Apr 20, 2025 4:43:03 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 4:43:03 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:43:03 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:43:06 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 4:43:14 PM com.lopez.App main
+INFO: Adding new chore: add logging and profiling features
+Apr 20, 2025 4:43:14 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 4:43:14 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:43:14 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:43:16 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 4:43:24 PM com.lopez.App main
+INFO: Adding new chore: fix docker connection
+Apr 20, 2025 4:43:24 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 4:43:24 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:43:24 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:43:27 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 4:43:27 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 4:43:27 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:43:27 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:43:30 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 4:43:51 PM com.lopez.App main
+INFO: Adding new chore: Work on Jenkins pipeline 
+Apr 20, 2025 4:43:51 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 4:43:51 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:43:51 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:43:52 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 4:44:03 PM com.lopez.App main
+INFO: Adding new chore: figure out why jenkins did not build docker image
+Apr 20, 2025 4:44:03 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 4:44:03 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:44:03 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:44:05 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 4:44:05 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 4:44:05 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:44:05 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 4:44:07 PM com.lopez.App main
+INFO: User selected option: Q
+Apr 20, 2025 4:44:07 PM com.lopez.App main
+INFO: User requested to quit the application
+Apr 20, 2025 4:44:07 PM com.lopez.App main
+INFO: Closing input scanner
+Apr 20, 2025 4:44:07 PM com.lopez.App main
+INFO: Application shutting down

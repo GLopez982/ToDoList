@@ -21,14 +21,6 @@ public class App {
         } catch (Exception e) {
             System.err.println("Could not load logging configuration file");
         }
-
-        ToDoList myDoList = ToDoList.getToDoInstance();
-        boolean isRunning = true;
-
-        logger.info("ToDo Application started");
-        System.out.println("Welcome to the ToDo Menu >> ");
-        System.out.println("Please make a selection:  ");
-        System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
         try{
             FileHandler fileHandler = new FileHandler("application.log", true);
             fileHandler.setLevel(Level.ALL);
@@ -43,6 +35,15 @@ public class App {
         }catch (Exception e) {
             logger.severe("Error setting up file handler: " + e.getMessage());
         }
+
+        ToDoList myDoList = ToDoList.getToDoInstance();
+        boolean isRunning = true;
+
+        logger.info("ToDo Application started");
+        System.out.println("Welcome to the ToDo Menu >> ");
+        System.out.println("Please make a selection:  ");
+        System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
+
         while(isRunning) {
 
             Scanner input = new Scanner(System.in);
@@ -73,8 +74,22 @@ public class App {
                     System.out.println(myDoList.toString());
                     System.out.println("Enter the index number of the completed chore to be removed >>> ");
                     int userIndex = input.nextInt();
+                    if(!input.hasNextLine()){
+                        logger.warning("User did not enter a valid index number");
+                        System.out.println("Please enter a valid index number");
+                        userIndex = input.nextInt();
+                        input.nextLine();
+
+                    }
+                    logger.info("User entered index number: " + userIndex);
                     input.nextLine();
                     logger.info("Removing chore at index: " + userIndex);
+                    if(userIndex < 0 || userIndex >= myDoList.toDoList.size()){
+                        logger.severe("Index number invalid, out of bounds or invalid keystroke pressed ");
+                        System.out.println("Please enter a valid index number");
+                        userIndex = input.nextInt();
+                        input.nextLine();
+                    }
                     myDoList.removeChore(userIndex);
                     logger.fine("Chore removed successfully");
                     System.out.println("Chore removed successfully ");
@@ -98,7 +113,7 @@ public class App {
                     userchar = userChoice.toLowerCase().charAt(0);
                     break;
             }
-         logger.info("Closing input scanner");
+
         }
       
         
