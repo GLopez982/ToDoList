@@ -29,9 +29,7 @@ public class App {
         System.out.println("Welcome to the ToDo Menu >> ");
         System.out.println("Please make a selection:  ");
         System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
-
-        while(isRunning) {
-            try{
+        try{
             FileHandler fileHandler = new FileHandler("application.log", true);
             fileHandler.setLevel(Level.ALL);
             logger.addHandler(fileHandler);
@@ -42,9 +40,11 @@ public class App {
             consoleHandler.setLevel(Level.ALL);
             logger.addHandler(consoleHandler);
             logger.info("File handler and console handler set up successfully");
-            }catch (Exception e) {
-                logger.severe("Error setting up file handler: " + e.getMessage());
-            }
+        }catch (Exception e) {
+            logger.severe("Error setting up file handler: " + e.getMessage());
+        }
+        while(isRunning) {
+
             Scanner input = new Scanner(System.in);
             System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
             String userChoice = input.nextLine();

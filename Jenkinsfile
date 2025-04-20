@@ -32,7 +32,7 @@ pipeline {
              bat 'docker build -t %IMAGE_NAME% .'
              bat 'docker tag %IMAGE_NAME% %DOCKER_HUB_REPO%:latest'
              withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-               bat 'docker push %DOCKER_HUB_REPO%'
+              bat 'docker push %DOCKER_HUB_REPO%'
              }
          }
      }

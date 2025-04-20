@@ -5,7 +5,6 @@ WORKDIR /app
 
 # Copy the project files to the /app directory
 COPY . .
-
 # Change to the source directory
 WORKDIR /app/src/main/java/com/lopez
 
@@ -13,4 +12,4 @@ WORKDIR /app/src/main/java/com/lopez
 RUN javac *.java
 
 # Run the Java application
-CMD ["java", "-cp", "/app/src/main/java", "com.lopez.App"]
+CMD ["java", "-cp", "/app/src/main/java", "com.lopez.ToDoListGUI"]
