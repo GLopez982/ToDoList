@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM eclipse-temurin:23-jdk
 
 # The /app directory should act as the main application directory
 WORKDIR /app
