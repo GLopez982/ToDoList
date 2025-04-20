@@ -1,76 +1,107 @@
 package com.lopez;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Formatter;
+import java.util.logging.SimpleFormatter;
+import java.util.logging.LogManager;
 
-public class App 
-{
-      public static void main(String[] args) {
+public class App {
+    private static final Logger logger = Logger.getLogger(App.class.getName());
 
-            ToDoList myDoList = ToDoList.getToDoInstance();
-
-            boolean isRunning = true;
-
-
-
-            System.out.println("Welcome to the ToDo Menu >> ");
-            System.out.println("Please make a selection:  ");
-            System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
-
-            while(isRunning) {
-
-                Scanner input = new Scanner(System.in);
-                System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
-                String userChoice = input.nextLine();
-                while(userChoice.isEmpty()){
-                    System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
-                    userChoice = input.nextLine();
-                }
-                char userchar = userChoice.toUpperCase().charAt(0);
-
-                switch (userchar) {
-
-
-                    case 'A':
-                        System.out.println("Please enter a chore to add to the list >> ");
-                        String chore = input.nextLine();
-                        myDoList.addChore(chore);
-                        System.out.println("Chore list updated successfully ");
-                        break;
-
-                    case 'R':
-
-                        System.out.println("This is your current ToDo list >>> ");
-                        System.out.println(myDoList.toString());
-                        System.out.println("Enter the index number of the completed chore to be removed >>> ");
-                        int  userIndex = input.nextInt();
-                        input.nextLine();
-                        myDoList.removeChore(userIndex);
-                        System.out.println("Chore removed successfully ");
-                        break;
-
-
-                    case 'D':
-                        myDoList.getToDoList();
-
-                        break;
-
-
-                    case 'Q':
-                        System.out.println("Exiting the program...\n.... Have a great day.");
-                        isRunning = false;
-                        break;
-
-                    default:
-                        System.out.println("Please enter a valid menu choice >> ");
-                        userChoice = input.nextLine();
-                        userchar = userChoice.toLowerCase().charAt(0);
-                        break;
-
-
-                }
-
-
-            }
-
+    public static void main(String[] args) {
+        try {
+            // Load logging configuration
+            LogManager.getLogManager().readConfiguration(
+                App.class.getClassLoader().getResourceAsStream("LoggingConfiguration.properties")
+            );
+        } catch (Exception e) {
+            System.err.println("Could not load logging configuration file");
         }
+
+        ToDoList myDoList = ToDoList.getToDoInstance();
+        boolean isRunning = true;
+
+        logger.info("ToDo Application started");
+        System.out.println("Welcome to the ToDo Menu >> ");
+        System.out.println("Please make a selection:  ");
+        System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
+
+        while(isRunning) {
+            try{
+            FileHandler fileHandler = new FileHandler("application.log", true);
+            fileHandler.setLevel(Level.ALL);
+            logger.addHandler(fileHandler);
+            Formatter formatter = new SimpleFormatter();
+            fileHandler.setFormatter(formatter);
+            logger.setLevel(Level.ALL);
+            ConsoleHandler consoleHandler = new ConsoleHandler();
+            consoleHandler.setLevel(Level.ALL);
+            logger.addHandler(consoleHandler);
+            logger.info("File handler and console handler set up successfully");
+            }catch (Exception e) {
+                logger.severe("Error setting up file handler: " + e.getMessage());
+            }
+            Scanner input = new Scanner(System.in);
+            System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
+            String userChoice = input.nextLine();
+            
+            while(userChoice.isEmpty()){
+                logger.warning("User provided empty input");
+                System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit");
+                userChoice = input.nextLine();
+            }
+            
+            char userchar = userChoice.toUpperCase().charAt(0);
+            logger.info("User selected option: " + userchar);
+
+            switch (userchar) {
+                case 'A':
+                    System.out.println("Please enter a chore to add to the list >> ");
+                    String chore = input.nextLine();
+                    logger.info("Adding new chore: " + chore);
+                    myDoList.addChore(chore);
+                    logger.fine("Chore added successfully");
+                    System.out.println("Chore list updated successfully ");
+                    break;
+
+                case 'R':
+                    System.out.println("This is your current ToDo list >>> ");
+                    System.out.println(myDoList.toString());
+                    System.out.println("Enter the index number of the completed chore to be removed >>> ");
+                    int userIndex = input.nextInt();
+                    input.nextLine();
+                    logger.info("Removing chore at index: " + userIndex);
+                    myDoList.removeChore(userIndex);
+                    logger.fine("Chore removed successfully");
+                    System.out.println("Chore removed successfully ");
+                    break;
+
+                case 'D':
+                    logger.info("Displaying ToDo list");
+                    myDoList.getToDoList();
+                    break;
+
+                case 'Q':
+                    logger.info("User requested to quit the application");
+                    System.out.println("Exiting the program...\n.... Have a great day.");
+                    isRunning = false;
+                    break;
+
+                default:
+                    logger.warning( "Invalid menu choice entered: " + userchar);
+                    System.out.println("Please enter a valid menu choice >> ");
+                    userChoice = input.nextLine();
+                    userchar = userChoice.toLowerCase().charAt(0);
+                    break;
+            }
+         logger.info("Closing input scanner");
+        }
+      
+        
+        logger.info("Application shutting down");
     }
+}
