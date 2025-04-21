@@ -358,3 +358,61 @@ Apr 20, 2025 10:25:55 PM com.lopez.App main
 INFO: File handler and console handler set up successfully
 Apr 20, 2025 10:25:55 PM com.lopez.App main
 INFO: ToDo Application started
+Apr 20, 2025 10:59:58 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 10:59:58 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 11:00:24 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 11:00:28 PM com.lopez.App main
+INFO: Adding new chore: walk the dog
+Apr 20, 2025 11:00:28 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 11:00:40 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 11:00:45 PM com.lopez.App main
+INFO: Adding new chore: Fix kubernetes
+Apr 20, 2025 11:00:45 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 11:00:49 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 11:00:49 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 11:00:56 PM com.lopez.App main
+INFO: User selected option: R
+Apr 20, 2025 11:01:00 PM com.lopez.App main
+INFO: User entered index number: 9
+Apr 20, 2025 11:01:00 PM com.lopez.App main
+INFO: Removing chore at index: 9
+Apr 20, 2025 11:01:00 PM com.lopez.App main
+FINE: Chore removed successfully
+Apr 20, 2025 11:01:02 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 11:01:02 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 11:01:10 PM com.lopez.App main
+INFO: User selected option: Q
+Apr 20, 2025 11:01:10 PM com.lopez.App main
+INFO: User requested to quit the application
+Apr 20, 2025 11:01:10 PM com.lopez.App main
+INFO: Application shutting down
+Apr 20, 2025 11:05:45 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 11:05:46 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 11:06:34 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 11:06:46 PM com.lopez.App main
+INFO: Adding new chore: Fix the front door
+Apr 20, 2025 11:06:46 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 11:09:41 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 11:09:41 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 11:10:41 PM com.lopez.App main
+INFO: User selected option: Q
+Apr 20, 2025 11:10:41 PM com.lopez.App main
+INFO: User requested to quit the application
+Apr 20, 2025 11:10:41 PM com.lopez.App main
+INFO: Application shutting down
