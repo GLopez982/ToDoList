@@ -19,7 +19,7 @@ public class App {
                 App.class.getClassLoader().getResourceAsStream("LoggingConfiguration.properties")
             );
         } catch (Exception e) {
-            System.err.println("Could not load logging configuration file");
+            logger.severe("Could not load logging configuration file");
         }
         try{
             FileHandler fileHandler = new FileHandler("application.log", true);

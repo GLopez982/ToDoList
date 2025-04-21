@@ -268,3 +268,39 @@ Apr 20, 2025 5:29:46 PM com.lopez.App main
 FINE: Chore added successfully
 Apr 20, 2025 5:29:47 PM com.lopez.App main
 INFO: User selected option: R
+Apr 20, 2025 8:01:45 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 8:01:45 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 8:11:56 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 8:11:56 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 8:12:10 PM com.lopez.App main
+WARNING: User provided empty input
+Apr 20, 2025 8:12:13 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 8:12:20 PM com.lopez.App main
+INFO: Adding new chore: Walk to the bank
+Apr 20, 2025 8:12:20 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 8:12:51 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 8:12:59 PM com.lopez.App main
+INFO: Adding new chore: water plants
+Apr 20, 2025 8:12:59 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 8:13:04 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:13:04 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 8:13:06 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:13:06 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 8:13:41 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 8:13:50 PM com.lopez.App main
+INFO: Adding new chore: Pour some juice
+Apr 20, 2025 8:13:50 PM com.lopez.App main
+FINE: Chore added successfully
