@@ -43,6 +43,7 @@ public class App {
         System.out.println("Welcome to the ToDo Menu >> ");
         System.out.println("Please make a selection:  ");
         System.out.println("A to add a chore to the list, R to remove a chore from the list, D to display the list, Q to quit ");
+        System.out.printf("Enter your choice: ");
 
         while(isRunning) {
 

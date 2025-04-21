@@ -304,3 +304,57 @@ Apr 20, 2025 8:13:50 PM com.lopez.App main
 INFO: Adding new chore: Pour some juice
 Apr 20, 2025 8:13:50 PM com.lopez.App main
 FINE: Chore added successfully
+Apr 20, 2025 8:50:28 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 8:50:28 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 8:51:56 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:51:56 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 8:52:16 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 8:52:20 PM com.lopez.App main
+INFO: Adding new chore: walk the dog
+Apr 20, 2025 8:52:20 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 8:52:23 PM com.lopez.App main
+INFO: User selected option: A
+Apr 20, 2025 8:53:12 PM com.lopez.App main
+INFO: Adding new chore: Pickle the cucumbers
+Apr 20, 2025 8:53:12 PM com.lopez.App main
+FINE: Chore added successfully
+Apr 20, 2025 8:53:22 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:53:22 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 8:53:25 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:53:25 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 8:56:10 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 8:56:10 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 9:14:08 PM com.lopez.App main
+INFO: User selected option: D
+Apr 20, 2025 9:14:08 PM com.lopez.App main
+INFO: Displaying ToDo list
+Apr 20, 2025 9:14:10 PM com.lopez.App main
+INFO: User selected option: Q
+Apr 20, 2025 9:14:10 PM com.lopez.App main
+INFO: User requested to quit the application
+Apr 20, 2025 9:14:10 PM com.lopez.App main
+INFO: Application shutting down
+Apr 20, 2025 9:14:30 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 9:14:30 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 10:25:44 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 10:25:44 PM com.lopez.App main
+INFO: ToDo Application started
+Apr 20, 2025 10:25:55 PM com.lopez.App main
+INFO: File handler and console handler set up successfully
+Apr 20, 2025 10:25:55 PM com.lopez.App main
+INFO: ToDo Application started
